@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar เด้งไปยังคอนเทน</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../static/css/home.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h2>Portfolio</h2>
+      <label for="btn" class="icon">
+        <span class="fa fa-bars"></span>
+      </label>
+      <input type="checkbox" id="btn">
+    
+      <ul>
+        <li><a href="#about" onclick="openTab('about')">About</a></li>
+        <li><a href="#project" onclick="openTab('project')">Project</a></li>
+        <li><a href="#contact" onclick="openTab('contact')">Contact</a></li>
+      </ul>
+      <span class="toggleMenu"></span>
+    </div>
+
+    <div id="about" class="tabcontent"></div>
+    <div id="project" class="tabcontent" ></div>
+    <div id="contact" class="tabcontent"></div>
+
+    <script>
+      $(document).ready(function () {
+        loadTab("about", "about");
+        loadTab("project", "project");
+        loadTab("contact", "contact");
+      });
+
+      function loadTab(tabFile, tabName) {
+        $.ajax({
+            url: tabFile,
+            type: 'GET',
+            dataType: 'html',
+            success: function(data) {
+                $('#' + tabName).html(data);
+            },
+            error: function(xhr, status, error) {
+                console.error('Error loading tab:', error);
+            }
+        });
+    }
+
+      function openTab(tabName) {
+        var tabElement = document.getElementById(tabName);
+        var navbarHeight = document.querySelector(".navbar").offsetHeight;
+        tabElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    </script>
+
+
+  </body>
+</html>

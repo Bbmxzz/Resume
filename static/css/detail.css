@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Kanit&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arimo", sans-serif;
+}
+body{
+  background-color: #060918;
+  
+}
+.containerabout{
+  width: 100%;
+  height: 100vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-size: cover;
+  background-position: center;
+}
+.content{
+  max-width: 60%;
+  padding-top: 5%;
+  position: absolute;
+  bottom: 15%;
+}
+.content h2{
+  font-size: 50px;
+  color: #ffffff;
+}
+.content p{
+  margin-top: 10px;
+  line-height: 25px;
+  color: #fffef9e6;
+  font-family: "Kanit", sans-serif;
+}
+.page{
+  height: 100vh;
+}
+.pdf{
+  height: 90vh;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  margin-top: 30px;
+}
+.detail{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+.pic{
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px 0 30px 0;
+}
+.pic img{
+  width: 25vw;
+  height: 50vh;
+  object-fit: cover;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+video{
+  margin-bottom: 30px;
+}
+
+.videoyoutube{
+  height: 90vh;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center; 
+}
+
+.webpage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 30px 0;
+}
+
+.webpage img{
+  width: 95%;
+}
+
+.webpage .pageinfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: transparent; /* ตั้งค่าสีพื้นหลังให้โปร่งใส */
+  border: none; /* ไม่มีเส้นขอบ */
+  cursor: pointer; /* กำหนดเมาส์เป็นรูปแบบของเคอร์เซอร์ */
+  font-size: 18px; /* ขนาดตัวอักษร */
+  font-weight: 500;
+  display: flex; /* กำหนดให้เป็น Flexbox */
+  align-items: center; /* จัดเรียงเนื้อหาให้อยู่ตรงกลางแนวดิ่ง */
+  padding-top: 35px;
+  color: rgb(255, 255, 255);
+}
+
+button i {
+  margin-right: 10px; /* กำหนดระยะห่างของไอคอนทางด้านขวา */
+  transition: transform 0.3s;
+}
+
+button:hover{
+  color: #e5e7eb;
+}
+
+button:hover i {
+  transform: translateX(-3px); /* เลื่อนไอคอนลูกศรไปทางซ้ายเล็กน้อยเมื่อ hover */
+}
+
