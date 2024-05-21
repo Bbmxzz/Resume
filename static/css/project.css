@@ -5,7 +5,7 @@
 }
 
 body{
-  background: #ffffff;
+  background: #EEEEEE;
   height: 100%;
 }
 
@@ -32,7 +32,6 @@ body{
   transition: 0.5s;
 }
 
-
 .slide .item:nth-child(1),
 .slide .item:nth-child(2){
   top: 0;
@@ -53,8 +52,8 @@ body{
   background: inherit;
   background-size: cover;
   background-position: center;
-  filter: blur(3px);
-  background-color: rgba(25 , 25, 25, 0.3); /* สีแดงที่มีความโปร่งใส 50% */
+  filter: blur(4px);
+  background-color: rgba(25 , 25, 25, 0.4); /* สีแดงที่มีความโปร่งใส 50% */
   background-blend-mode: overlay; /* โหมดการผสมสี */
   z-index: 0;
 }
@@ -75,6 +74,7 @@ body{
   opacity: 0;
 }
 
+
 .item .content{
   position: absolute;
   top: 40%;
@@ -88,6 +88,19 @@ body{
   z-index: 1;
 }
 
+.content .tag {
+  backdrop-filter: blur(7px);
+  color: #ffffff;
+  /*background-color: rgb(247, 234, 61);*/
+  border: 1px solid rgb(255, 255, 255); /* เพิ่มเส้นขอบเพื่อเชื่อมต่อสีเช้ม */
+  width: fit-content; /* ขยาย Navbar ให้เต็มขนาดของหน้าจอ */
+  height: fit-content;
+  border-radius: 60px;
+  animation: animate 1s ease-in-out 1 forwards;
+  padding: 0 15px 0 15px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
 
 .slide .item:nth-child(2) .content{
   display: block;
