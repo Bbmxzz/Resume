@@ -2,7 +2,7 @@ from flask import Flask, request, render_template, jsonify
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
-
+#uri = "mongodb://localhost:27017/"
 uri = "mongodb+srv://65010739:Baimon2547@resume.jvkqtwc.mongodb.net/?retryWrites=true&w=majority&appName=resume"
 # Create a new client and connect to the server
 myclient = MongoClient(uri, server_api=ServerApi('1'))
@@ -71,6 +71,7 @@ def submit():
 
         if result.inserted_id:
             return jsonify({'status': 'success'})
+        
         else:
             return jsonify({'status': 'failed'})
 

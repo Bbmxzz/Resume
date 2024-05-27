@@ -7,7 +7,6 @@
 }
 body{
   background-color: #060918;
-  
 }
 .containerabout{
   width: 100%;
@@ -119,3 +118,34 @@ button:hover i {
   transform: translateX(-3px); /* เลื่อนไอคอนลูกศรไปทางซ้ายเล็กน้อยเมื่อ hover */
 }
 
+#btt{
+  padding: 12px 15.75px;
+  border: 5px solid #060918;
+  background-color: #ffffff;
+  color: #000000;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 30px;
+  display: none;
+  transition: transform 0.3s ease;
+}
+#btt i{
+  margin: 0;
+}
+#btt:hover i{
+  transform: translateY(0px);
+}
+
+#btt:hover {
+  animation: bounce 0.3s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0); /* เริ่มต้นที่ตำแหน่งเดิม */
+  }
+  100% {
+    transform: translateY(-3px); /* เคลื่อนที่ขึ้น */
+  }
+}
