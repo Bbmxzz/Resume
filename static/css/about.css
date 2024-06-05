@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -33,9 +34,7 @@ body{
   margin-top: 10px;
   line-height: 25px;
 }
-a{
-  color: #fff;
-}
+
 .link {
   margin-top: 30px;
 }
@@ -53,4 +52,279 @@ a{
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
+}
+
+.aboutdetail{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding-top: 10vh ;
+}
+
+.aboutdetail .about{
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh 0;
+}
+
+.aboutdetail .about h3{
+  writing-mode: vertical-lr; 
+  transform: rotate(180deg);
+  padding: 0;
+  font-size: 45px;
+  color: #211c69;
+  font-weight: 800;
+}
+
+
+.aboutdetail .about .detailprofile{
+  width: 45%;
+  padding-left: 5vw;
+}
+.aboutdetail .about .detailprofile p{
+  color: #000;
+  text-align: left;
+}
+
+.aboutdetail .act{
+  padding: 30px 0 45px 0;
+  background-color: #211c69;
+}
+
+.aboutdetail .act h3{
+  font-size: 30px;
+  color: #ffffff;
+  padding: 0 0 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: system-ui;
+}
+
+.aboutdetail h3{
+  font-size: 30px;
+  color: #313131;
+  padding: 0 0 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: system-ui;
+}
+
+.aboutdetail .grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 40px;
+}
+
+.aboutdetail .grid .image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.aboutdetail .grid .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.5s;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+  font-size: 18px;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+.overlay p{
+  font-size: 12px;
+  font-weight: 400;
+}
+.image-container:hover img {
+  transform: scale(1.2); /* Scale the image to 120% */
+  transition: 0.5s;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.aboutdetail .detailbox{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutdetail .detailbox .box {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 0 5%;
+} 
+
+.box .logo {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+  /* background: #FFFADD; */
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.box .logo img {
+  width: auto;
+  height: 80px; /* Fixed image height */
+  object-fit: contain;
+}
+
+.box .logo p {
+  margin: 10px 0 0 0; /* Adjust the margin as needed */
+  font-size: 14px;
+  color: #000;
+  
+}
+
+.box .namebox .fontend, .box .namebox .backend,.box .namebox .database,
+.box .namebox .uxui,.box .namebox .other{
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  margin: 0 10px;
+  flex-wrap: wrap;
+  background-color: #FFFADD;
+}
+
+.box .namebox{
+  color: #313131;
+  display: flex;
+  flex-direction: column;
+}
+
+.box .namebox h4{
+  padding-top: 15px;
+}
+
+@media(max-width: 636px){
+  .content{
+    position: relative;
+    top: 20%;
+    max-width: 600px;
+  }
+
+  .content h3{
+    font-size: 22px;
+  }
+    
+  .content h2{
+    font-size: 50px;
+  }
+
+  .link {
+    position: relative;
+    top: 20%;
+  }
+
+  .aboutdetail .about{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .aboutdetail .about h3{
+    writing-mode: horizontal-tb; 
+    transform: rotate(0deg);
+
+  }
+  .aboutdetail .about .detailprofile{
+    width: 90%;
+    padding-left: 5vw;
+  }
+  .aboutdetail .about .detailprofile p{
+    padding-top: 25px;
+  }
+  .aboutdetail .grid {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 20px;
+  }
+
+
+  .overlay{
+    font-size: 14px;
+  }
+
+  .overlay p{
+    font-size: 10px;
+  }
+  
+  .aboutdetail .detailbox .box {
+    width: calc(100vw - 14px);
+    margin: 0 7px;
+  } 
+
+  .aboutdetail .grid .image-container {
+    height: 210px;
+  }
+
+  .box .logo {
+    width: 60px;
+    height: auto;
+    margin: 10px 10px;
+    padding: 15px 15px;
+  }
+
+  .box .logo img {
+    width: auto;
+    height: 60px;
+    object-fit: contain;
+  }
+  .box .namebox .fontend, .box .namebox .backend,.box .namebox .database,
+  .box .namebox .uxui,.box .namebox .other{
+    margin: 0 5px;
+  }
+  .box .logo p {
+    width: 70px;
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 360px){
+  .aboutdetail .act h3 {
+    font-size: 25px;
+  }
+
+  .box .logo {
+    width: 55px;
+    height: auto;
+  }
+
 }

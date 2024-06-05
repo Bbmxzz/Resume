@@ -8,32 +8,37 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-  <div class="containerabout" style="background-image: linear-gradient(to bottom, rgba(6 , 9, 24, 0.5), rgba(6, 9, 24, 1)), url(../static/pic/project4/4-0.jpg);">
+  <button onclick="backtotop()" id="btt" title="Back to top"> 
+    <i class="fas fa-arrow-up"></i>
+  </button> 
+
+  <div class="containerabout" style="background-image: linear-gradient(to bottom, rgba(6 , 9, 24, 0.4), #211c69), url(../static/pic/project4/4-0.jpg);">
     <div class='page' >
-      
       <button onclick="history.back()">
         <i class="fas fa-arrow-left-long"></i> Back to projects
       </button>
-      
       <div class="content">
         <h2>Unlock Temperature Controller</h2>
         <p>เมื่อผู้ใช้ทำการกรอกรหัสผ่านบนปุ่มกด รหัสผ่านจะแสดงผลบนหน้าจอLCD เมื่อกดยืนยันและรหัสผ่านถูกต้องจากการประมวลผลผ่านไมโครคอนโทรลเลอร์ แล้วถึงจะสั่งการให้เซ็นเซอร์เริ่มทำงาน และตรวจวัดอุณหภูมิ เพื่อใช้ในการระบายอากาศเปรียบเสมือนให้ระบบทำงานเมื่อมีการเข้ารหัส</p>
       </div>
     </div>
   </div>
-  <div class='page pdf'>
-    <iframe src="https://drive.google.com/file/d/1w09CC2I9YLh3kxVX9QxuOM2jkdF_nmp7/preview" width="90%" height="100%" allow="autoplay"></iframe>
-  </div>
-  <div class='detail'>
-    <div class='pic'>
-      <img src="../static/pic/project4/4-0.jpg" alt="Girl in a jacket" >
-      <img src="../static/pic/project4/4-3.png" alt="Girl in a jacket" >
-      <img src="../static/pic/project4/4-4.jpg" alt="Girl in a jacket" >
+  <div style="background-image: linear-gradient(to bottom, #211c69, rgba(6 , 9, 24));">
+    <div class='page pdf'>
+      <iframe src="https://drive.google.com/file/d/1w09CC2I9YLh3kxVX9QxuOM2jkdF_nmp7/preview" width="95%" height="100%" allow="autoplay"></iframe>
     </div>
-    <video width="85%" height="100%" controls>
-      <source src="../static/pic/project4/Unlock.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <div class='detail'>
+      <video width="95%" height="100%" controls>
+        <source src="../static/pic/project4/Unlock.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class='pic'>
+        <img src="../static/pic/project4/4-0.jpg" alt="Girl in a jacket" >
+        <img src="../static/pic/project4/4-3.png" alt="Girl in a jacket" >
+        <img src="../static/pic/project4/4-4.jpg" alt="Girl in a jacket" >
+      </div>
+    </div>
   </div>
+  <script src="../static/js/backtotop.js"></script>
 </body>
 </html>

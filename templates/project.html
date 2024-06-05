@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-  <div class="containerproject">
+<div class="cover">
+ <div class="containerproject">
     <div class="slide">
         <div class="item" style="background-image: url('{{ url_for('static', filename='pic/project6/6-1.png') }}');">
 
             <div class="content">
                 <div class="tag">Software</div>
                 <div class="name">Preliminary Mental Assessment</div>
-                <div class="des">Year 2 project, Semester 2/2024</div>
-                <button onclick="window.open('/detailproject6', '_self');">See More</button>
+                <div class="des">Year 2 project, Semester 2/2024</div>  
+                <button class="soft" onclick="window.open('/detailproject6', '_self');">See More</button>
             </div>
         </div>
         <div class="item" style="background-image: url('{{ url_for('static', filename='pic/project1/1-1.jpg') }}');">
@@ -25,6 +26,7 @@
                 <div class="tag">Hardware</div>
                 <div class="name">Eye-to-Computer Screen Distance Detector</div>
                 <div class="des">Year 1 project, Semester 1/2023</div>
+                
                 <button onclick="window.open('/detailproject1', '_self');">See More</button>
             </div>
         </div>
@@ -57,12 +59,24 @@
                 <div class="tag">Software</div>
                 <div class="name">To Do List</div>
                 <div class="des">Year 2 project, Semester 2/2024</div>
-                <button onclick="window.open('/detailproject5', '_self');">See More</button>
+                <button class="soft" onclick="window.open('/detailproject5', '_self');">See More</button>
             </div>
         </div>
-        
-
     </div>
+    <div id="image-data"
+       data-url-1-2="{{ url_for('static', filename='pic/project1/1-2.png') }}"
+       data-url-6-1="{{ url_for('static', filename='pic/project6/6-1.png') }}"
+       data-url-6-2="{{ url_for('static', filename='pic/project6/6-2.png') }}"
+       data-url-5-1="{{ url_for('static', filename='pic/project5/5-1.jpg') }}"
+       data-url-5-4="{{ url_for('static', filename='pic/project5/5-4.png') }}"
+       data-url-4-0="{{ url_for('static', filename='pic/project4/4-0.jpg') }}"
+       data-url-4-1="{{ url_for('static', filename='pic/project4/4-1.jpg') }}"
+       data-url-3-1="{{ url_for('static', filename='pic/project3/3-1.jpg') }}"
+       data-url-3-2="{{ url_for('static', filename='pic/project3/3-2.jpg') }}"
+       data-url-2-1="{{ url_for('static', filename='pic/project2/2-1.jpg') }}"
+       data-url-2-2="{{ url_for('static', filename='pic/project2/2-2.jpg') }}"
+       data-url-1-1="{{ url_for('static', filename='pic/project1/1-1.jpg') }}">
+  </div>
 
     <div class="button">
         <button class="prev" ><i class="fa-solid fa-arrow-left"></i></button>
@@ -70,103 +84,93 @@
     </div>
 
   </div>
+  <div class="aboutdetail">
+    <div class="detailbox skill">
+      <h3>My Skill</h3>
+      <div class="box">
+        <div class="namebox">
+          <h4>Front-End</h4>
+          <div class="fontend">
+            <div class="logo">
+              <img src="../static/pic/skill/html.png" alt="HTML">
+              <p>HTML</p>
+            </div>
+            <div class="logo">
+              <img src="../static/pic/skill/css.png" alt="CSS">
+              <p>CSS</p>
+            </div>
+            <div class="logo">
+              <img src="../static/pic/skill/js.png" alt="JavaScript">
+              <p>JavaScript</p>
+            </div>
+            <div class="logo">
+              <img src="../static/pic/skill/react.png" alt="React">
+              <p>React</p>
+            </div>
+          </div>
+        </div>
 
+        <div class="namebox">
+          <h4>Back-End</h4>
+          <div class="backend">
+            <div class="logo">
+              <img src="../static/pic/skill/python.png" alt="Python">
+              <p>Python</p>
+            </div>
+            <div class="logo">
+              <img src="../static/pic/skill/nodejs.png" alt="Node Js">
+              <p>Node JS</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="namebox">
+          <h4>Database</h4>
+          <div class="database">
+            <div class="logo">
+              <img src="../static/pic/skill/firebase.png" alt="Firebase">
+              <p>Firebase</p>
+            </div>
+            <div class="logo">
+              <img src="../static/pic/skill/mongodb.png" alt="MongoDB">
+              <p>MongoDB</p>
+            </div>
+          </div>
+        </div> 
+
+        <div class="namebox">
+          <h4>Ux/Ui</h4>
+          <div class="uxui">
+            <div class="logo">
+              <img src="../static/pic/skill/figma.png" alt="Figma">
+              <p>Figma</p>
+            </div>
+            <div class="logo">
+              <img src="../static/pic/skill/xd.png" alt="Adobe XD">
+              <p>Adobe XD</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="namebox">
+          <h4>Other</h4>
+          <div class="other">
+            <div class="logo">
+              <img src="../static/pic/skill/c.png" alt="C">
+              <p>C</p>
+            </div>
+            <div class="logo">
+              <img src="../static/pic/skill/arduino.png" alt="Arduino">
+              <p>Arduino</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function() {
-        let nextImage = '{{ url_for('static', filename='pic/project1/1-2.png') }}';
-        $('.item:nth-child(2)').css('background-image', 'url(' + nextImage + ')');
-        
-        $('.next').click(function() {
-            let items = $('.item');
-            $('.slide').append(items.eq(0));
-            console.log(items); // แสดงค่าของ items ใน console
-            
-            // เลือกรูปปัจจุบันของ .item ที่มีลำดับที่ 2
-            let currentImage = $('.item:nth-child(2)').css('background-image');
-            if (currentImage.includes('1-1.jpg')) {
-                let nextImage = '{{ url_for('static', filename='pic/project1/1-2.png') }}';
-                $('.item:nth-child(2)').css('background-image', 'url(' + nextImage + ')');
-                let backImage = '{{ url_for('static', filename='pic/project6/6-1.png') }}';
-                $('.item:nth-child(1)').css('background-image', 'url(' + backImage + ')');
-                
-            } else if (currentImage.includes('2-1.jpg')) {
-                let nextImage = '{{ url_for('static', filename='pic/project2/2-2.jpg') }}';
-                $('.item:nth-child(2)').css('background-image', 'url(' + nextImage + ')');
-                let backImage = '{{ url_for('static', filename='pic/project1/1-1.jpg') }}';
-                $('.item:nth-child(1)').css('background-image', 'url(' + backImage + ')');
-
-            } else if (currentImage.includes('3-1.jpg')) {
-                let nextImage = '{{ url_for('static', filename='pic/project3/3-2.jpg') }}';
-                $('.item:nth-child(2)').css('background-image', 'url(' + nextImage + ')');
-                let backImage = '{{ url_for('static', filename='pic/project2/2-1.jpg') }}';
-                $('.item:nth-child(1)').css('background-image', 'url(' + backImage + ')');
-
-            } else if (currentImage.includes('4-1.jpg')) {
-                let nextImage = '{{ url_for('static', filename='pic/project4/4-0.jpg') }}';
-                $('.item:nth-child(2)').css('background-image', 'url(' + nextImage + ')');
-                let backImage = '{{ url_for('static', filename='pic/project3/3-1.jpg') }}';
-                $('.item:nth-child(1)').css('background-image', 'url(' + backImage + ')');
-
-            } else if (currentImage.includes('5-1.jpg')) {
-                let nextImage = '{{ url_for('static', filename='pic/project5/5-4.png') }}';
-                $('.item:nth-child(2)').css('background-image', 'url(' + nextImage + ')');
-                let backImage = '{{ url_for('static', filename='pic/project4/4-1.jpg') }}';
-                $('.item:nth-child(1)').css('background-image', 'url(' + backImage + ')');
-
-            } else if (currentImage.includes('6-1.png'))  {
-                let nextImage = '{{ url_for('static', filename='pic/project6/6-2.png') }}';
-                $('.item:nth-child(2)').css('background-image', 'url(' + nextImage + ')');
-                let backImage = '{{ url_for('static', filename='pic/project5/5-1.jpg') }}';
-                $('.item:nth-child(1)').css('background-image', 'url(' + backImage + ')');
-            }
-        });
-      
-        $('.prev').click(function() {
-            let currentImg = $('.item:nth-child(2)').css('background-image');
-            let items = $('.item');
-            $('.slide').prepend(items.eq(items.length - 1));
-            console.log(items); // แสดงค่าของ items ใน console
-
-            if (currentImg.includes('1-2.png')) {
-                let nextImage = '{{ url_for('static', filename='pic/project1/1-1.jpg') }}';
-                $('.item:nth-child(3)').css('background-image', 'url(' + nextImage + ')');
-                let backImage = '{{ url_for('static', filename='pic/project6/6-2.png') }}';
-                $('.item:nth-child(2)').css('background-image', 'url(' + backImage + ')');
-                
-            } else if (currentImg.includes('2-2.jpg')) {
-                let nextImage = '{{ url_for('static', filename='pic/project2/2-1.jpg') }}';
-                $('.item:nth-child(3)').css('background-image', 'url(' + nextImage + ')');
-                let backImage = '{{ url_for('static', filename='pic/project1/1-2.png') }}';
-                $('.item:nth-child(2)').css('background-image', 'url(' + backImage + ')');
-        
-            } else if (currentImg.includes('3-2.jpg')) {
-                let nextImage = '{{ url_for('static', filename='pic/project3/3-1.jpg') }}';
-                $('.item:nth-child(3)').css('background-image', 'url(' + nextImage + ')');
-                let backImage = '{{ url_for('static', filename='pic/project2/2-2.jpg') }}';
-                $('.item:nth-child(2)').css('background-image', 'url(' + backImage + ')');
-        
-            } else if (currentImg.includes('4-0.jpg')) {
-                let nextImage = '{{ url_for('static', filename='pic/project4/4-1.jpg') }}';
-                $('.item:nth-child(3)').css('background-image', 'url(' + nextImage + ')');
-                let backImage = '{{ url_for('static', filename='pic/project3/3-2.jpg') }}';
-                $('.item:nth-child(2)').css('background-image', 'url(' + backImage + ')');
-        
-            } else if (currentImg.includes('5-4.png')) {
-                let nextImage = '{{ url_for('static', filename='pic/project5/5-1.jpg') }}';
-                $('.item:nth-child(3)').css('background-image', 'url(' + nextImage + ')');
-                let backImage = '{{ url_for('static', filename='pic/project4/4-0.jpg') }}';
-                $('.item:nth-child(2)').css('background-image', 'url(' + backImage + ')');
-        
-            } else if (currentImg.includes('6-2.png'))  {
-                let nextImage = '{{ url_for('static', filename='pic/project6/6-1.png') }}';
-                $('.item:nth-child(3)').css('background-image', 'url(' + nextImage + ')');
-                let backImage = '{{ url_for('static', filename='pic/project5/5-4.png') }}';
-                $('.item:nth-child(2)').css('background-image', 'url(' + backImage + ')');
-            }
-        
-        }); 
-    });
-    </script>
+  <script src="../static/js/project.js"></script>
 </body>
 </html>

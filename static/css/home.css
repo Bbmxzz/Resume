@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+  font-family: "Poppins", sans-serif;
+}
+
 /* สไตล์ของ Navbar */
 .navbar {
   overflow: hidden;
@@ -9,10 +14,10 @@
   left: 5%;
   top: 15px; /* ตำแหน่งด้านบนของหน้าจอ */
   z-index: 1000; /* กำหนดความสูงให้สูงกว่าเนื้อหาอื่น */
-  border-radius: 60px;
+  border-radius: 27.5px;
 }
   
-  /* ลิงค์ใน Navbar */
+/* ลิงค์ใน Navbar */
 .navbar a {
   display: block;
   color: #f2f2f2;
@@ -38,8 +43,6 @@
 .navbar ul li{
   display: inline-block;
 }
-
-
   
 /* ลิงค์ใน Navbar เมื่อ hover */
 .navbar a:hover {
@@ -49,21 +52,60 @@
   
 /* แสดงคอนเท็นต่างๆ */
 .tabcontent {
-  height: 100vh;
+  height: fit-content;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
+
 .icon,#btn{
   display: none;
 }
 
+#btt{
+  padding: 12px 15.75px;
+  border: 5px solid #211c69;
+  background-color: #ffffff;
+  color: #000000;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 30px;
+  display: none;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  cursor: pointer;
+}
 
+#btt i{
+  margin: 0;
+}
+
+#btt:hover {
+  animation: bounce 0.3s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
 
 @media(max-width: 636px){
-  .navbar ul{
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 10px;
+  }
+  .navbar ul {
     margin-right: 0px;
     float: left;
+    width: 100%;
+    clear: both;
+    padding: 0 3% 3% 3%;
   }
   .navbar ul li{
     display: block;
@@ -76,7 +118,7 @@
     right: 40px;
     font-size: 25px;
     cursor: pointer;
-    }
+  }
   ul {
     display: none;
   }
@@ -97,4 +139,3 @@
     margin-bottom: 15px;
   }
 }
-

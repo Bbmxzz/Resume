@@ -23,3 +23,9 @@ $(document).ready(function () {
     var navbarHeight = document.querySelector(".navbar").offsetHeight;
     tabElement.scrollIntoView({ behavior: "smooth", block: "start" });
   }
+
+  $(document).ready(function() {
+  $('.icon').click(function() {
+    $('.toggleMenu').toggle();
+  });
+});
