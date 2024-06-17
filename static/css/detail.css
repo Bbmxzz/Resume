@@ -134,7 +134,7 @@ button i {
 }
 
 button:hover{
-  color: #e7e7e7;
+  color: #e4e2e2;
 }
 
 button:hover i {
@@ -143,7 +143,7 @@ button:hover i {
 
 #btt{
   padding: 12px 15.75px;
-  border: 5px solid #FDDE55;
+  border: 5px solid #060918;
   background-color: #FDDE55;
   color: #000000;
   position: fixed;
@@ -163,6 +163,22 @@ button:hover i {
 
 #btt:hover {
   animation: bounce 0.3s infinite alternate;
+}
+
+.content .web {
+  padding: 10px 20px;
+  background-color: #FFCC70;
+  color: #000000;
+  border-radius: 5px;
+  font-size: 17px;
+  border: 2px solid #FFCC70;
+  text-decoration: none;
+}
+
+.content .web:hover {
+  color: #e7e7e7; 
+  border-color: #e7e7e7; 
+  background-color: transparent;
 }
 
 @keyframes bounce {
