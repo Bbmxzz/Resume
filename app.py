@@ -69,10 +69,10 @@ def submit():
         })
 
         if result.inserted_id:
-            return jsonify({'status': 'success'})
+            return jsonify(status='success')
         
         else:
-            return jsonify({'status': 'failed'})
+            return jsonify(status= 'failed')
 
 if __name__ == '__main__':
    app.run(host="0.0.0.0", port=5000, debug=True)
