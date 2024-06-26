@@ -235,6 +235,10 @@ body{
 }
 
 @media(max-width: 636px){
+  .containerabout{
+    background-position: right;
+    background-size: cover;
+  }
   .content{
     position: relative;
     top: 20%;
