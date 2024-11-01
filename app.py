@@ -40,16 +40,20 @@ def detailproject3():
     return render_template('project/armcheckmirror.html')
 
 @app.route("/detailproject4")
-def detailproject6():
+def detailproject4():
     return render_template('project/Temp.html')
 
 @app.route("/detailproject5")
-def detailproject4():
+def detailproject5():
     return render_template('project/Todolist.html')
 
 @app.route("/detailproject6")
-def detailproject5():
+def detailproject6():
     return render_template('project/mentalhealth.html')
+
+@app.route("/detailproject7")
+def detailproject7():
+    return render_template('project/capbook.html')
 
 
 

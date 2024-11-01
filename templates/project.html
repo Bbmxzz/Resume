@@ -12,15 +12,15 @@
 <div class="cover">
  <div class="containerproject">
     <div class="slide">
-        <div class="item" style="background-image: url('{{ url_for('static', filename='pic/project6/6-1.png') }}');">
 
-            <div class="content">
-                <div class="tag">Software</div>
-                <div class="name">Preliminary Mental Assessment</div>
-                <div class="des">Year 2 project, Semester 2/2024</div>  
-                <button class="soft" onclick="window.open('/detailproject6', '_self');">See More</button>
-            </div>
-        </div>
+        <div class="item" style="background-image: url('{{ url_for('static', filename='pic/project7/7-3.png') }}');">
+          <div class="content">
+              <div class="tag">Software</div>
+              <div class="name">Capbook</div>
+              <div class="des">Year 3 project, Semester 1/2025</div>
+              <button class="soft" onclick="window.open('/detailproject7', '_self');">See More</button>
+          </div>
+      </div>
         <div class="item" style="background-image: url('{{ url_for('static', filename='pic/project1/1-1.jpg') }}');">
             <div class="content">
                 <div class="tag">Hardware</div>
@@ -62,8 +62,18 @@
                 <button class="soft" onclick="window.open('/detailproject5', '_self');">See More</button>
             </div>
         </div>
+        <div class="item" style="background-image: url('{{ url_for('static', filename='pic/project6/6-1.png') }}');">
+          <div class="content">
+              <div class="tag">Software</div>
+              <div class="name">Preliminary Mental Assessment</div>
+              <div class="des">Year 2 project, Semester 2/2024</div>  
+              <button class="soft" onclick="window.open('/detailproject6', '_self');">See More</button>
+          </div>
+      </div>
     </div>
     <div id="image-data"
+       data-url-7-1="{{ url_for('static', filename='pic/project7/7-3.png') }}"
+       data-url-7-2="{{ url_for('static', filename='pic/project7/7-4.png') }}"
        data-url-1-2="{{ url_for('static', filename='pic/project1/1-2.png') }}"
        data-url-6-1="{{ url_for('static', filename='pic/project6/6-1.png') }}"
        data-url-6-2="{{ url_for('static', filename='pic/project6/6-2.png') }}"
@@ -85,6 +95,7 @@
     
   </div>
   <div class="status-bar">
+    <div class="status-item"></div>
     <div class="status-item"></div>
     <div class="status-item"></div>
     <div class="status-item"></div>

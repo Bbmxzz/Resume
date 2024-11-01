@@ -13,7 +13,10 @@ $(document).ready(function() {
         '3-2.jpg': imageData.getAttribute('data-url-3-2'),
         '2-1.jpg': imageData.getAttribute('data-url-2-1'),
         '2-2.jpg': imageData.getAttribute('data-url-2-2'),
-        '1-1.jpg': imageData.getAttribute('data-url-1-1')
+        '1-1.jpg': imageData.getAttribute('data-url-1-1'),
+        '7-3.png': imageData.getAttribute('data-url-7-1'),
+        '7-4.png': imageData.getAttribute('data-url-7-2')
+        
     };
 
     $('.item:nth-child(2)').css('background-image', 'url(' + urls['1-2.png'] + ')');
@@ -28,7 +31,7 @@ $(document).ready(function() {
         if (currentImage.includes('1-1.jpg')) {
             $('.status-item:nth-child(1)').addClass('active');
             $('.item:nth-child(2)').css('background-image', 'url(' + urls['1-2.png'] + ')');
-            $('.item:nth-child(1)').css('background-image', 'url(' + urls['6-1.png'] + ')');
+            $('.item:nth-child(1)').css('background-image', 'url(' + urls['7-3.png'] + ')');
 
         } else if (currentImage.includes('2-1.jpg')) {
             $('.status-item:nth-child(2)').addClass('active');
@@ -54,6 +57,11 @@ $(document).ready(function() {
             $('.status-item:nth-child(6)').addClass('active');
             $('.item:nth-child(2)').css('background-image', 'url(' + urls['6-2.png'] + ')');
             $('.item:nth-child(1)').css('background-image', 'url(' + urls['5-1.jpg'] + ')');
+
+        }else if (currentImage.includes('7-3.png')) {
+            $('.status-item:nth-child(7)').addClass('active');
+            $('.item:nth-child(2)').css('background-image', 'url(' + urls['7-4.png'] + ')');
+            $('.item:nth-child(1)').css('background-image', 'url(' + urls['6-1.png'] + ')');
         }
     });
 
@@ -64,9 +72,9 @@ $(document).ready(function() {
         $('.slide').prepend(items.eq(items.length - 1));
 
         if (currentImg.includes('1-2.png')) {
-            $('.status-item:nth-child(6)').addClass('active');
+            $('.status-item:nth-child(7)').addClass('active');
             $('.item:nth-child(3)').css('background-image', 'url(' + urls['1-1.jpg'] + ')');
-            $('.item:nth-child(2)').css('background-image', 'url(' + urls['6-2.png'] + ')');
+            $('.item:nth-child(2)').css('background-image', 'url(' + urls['7-4.png'] + ')');
 
         } else if (currentImg.includes('2-2.jpg')) {
             $('.status-item:nth-child(1)').addClass('active');
@@ -92,6 +100,11 @@ $(document).ready(function() {
             $('.status-item:nth-child(5)').addClass('active');
             $('.item:nth-child(3)').css('background-image', 'url(' + urls['6-1.png'] + ')');
             $('.item:nth-child(2)').css('background-image', 'url(' + urls['5-4.png'] + ')');
+
+        }else if (currentImg.includes('7-4.png')) {
+            $('.status-item:nth-child(6)').addClass('active');
+            $('.item:nth-child(3)').css('background-image', 'url(' + urls['7-3.png'] + ')');
+            $('.item:nth-child(2)').css('background-image', 'url(' + urls['6-2.png'] + ')');
         }
     });
 
@@ -119,22 +132,28 @@ $(document).ready(function() {
             $('.item:nth-child(2)').css('background-image', 'url(' + urls['3-2.jpg'] + ')');
         } else if (currentImage.includes('4-1.jpg')||currentImage.includes('4-0.jpg')) {
             $('.status-item:nth-child(4)').addClass('active');
-            $('.item:nth-child(5)').css('background-image', 'url(' + urls['1-1.jpg'] + ')');
+            $('.item:nth-child(5)').css('background-image', 'url(' + urls['7-3.png'] + ')');
             $('.item:nth-child(4)').css('background-image', 'url(' + urls['6-1.png'] + ')');
             $('.item:nth-child(3)').css('background-image', 'url(' + urls['5-1.jpg'] + ')');
             $('.item:nth-child(2)').css('background-image', 'url(' + urls['4-0.jpg'] + ')');
         } else if (currentImage.includes('5-1.jpg')||currentImage.includes('5-4.png')) {
             $('.status-item:nth-child(5)').addClass('active');
-            $('.item:nth-child(5)').css('background-image', 'url(' + urls['2-1.jpg'] + ')');
-            $('.item:nth-child(4)').css('background-image', 'url(' + urls['1-1.jpg'] + ')');
+            $('.item:nth-child(5)').css('background-image', 'url(' + urls['1-1.jpg'] + ')');
+            $('.item:nth-child(4)').css('background-image', 'url(' + urls['7-3.png'] + ')');
             $('.item:nth-child(3)').css('background-image', 'url(' + urls['6-1.png'] + ')');
             $('.item:nth-child(2)').css('background-image', 'url(' + urls['5-4.png'] + ')');
         } else if (currentImage.includes('6-1.png')||currentImage.includes('6-2.png')) {
             $('.status-item:nth-child(6)').addClass('active');
+            $('.item:nth-child(5)').css('background-image', 'url(' + urls['2-1.jpg'] + ')');
+            $('.item:nth-child(4)').css('background-image', 'url(' + urls['1-1.jpg'] + ')');
+            $('.item:nth-child(3)').css('background-image', 'url(' + urls['7-3.png'] + ')');
+            $('.item:nth-child(2)').css('background-image', 'url(' + urls['6-2.png'] + ')');
+        }else if (currentImage.includes('7-3.png')||currentImage.includes('7-4.png')) {
+            $('.status-item:nth-child(7)').addClass('active');
             $('.item:nth-child(5)').css('background-image', 'url(' + urls['3-1.jpg'] + ')');
             $('.item:nth-child(4)').css('background-image', 'url(' + urls['2-1.jpg'] + ')');
             $('.item:nth-child(3)').css('background-image', 'url(' + urls['1-1.jpg'] + ')');
-            $('.item:nth-child(2)').css('background-image', 'url(' + urls['6-2.png'] + ')');
+            $('.item:nth-child(2)').css('background-image', 'url(' + urls['7-4.png'] + ')');
         }
     }
 
